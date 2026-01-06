@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ビンビンルーレット</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">Quick decision helper</p>
+      <h1>ビンビンルーレット</h1>
+      <p class="subhead">Drop in your choices, spin the wheel, and let fate decide.</p>
+    </header>
+
+    <section class="content">
+      <div class="wheel-panel">
+        <div class="wheel-wrap">
+          <canvas id="wheel" width="420" height="420" aria-label="roulette wheel"></canvas>
+          <div class="pointer" aria-hidden="true"></div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Result</div>
+          <div id="result" class="result-value" aria-live="polite">--</div>
+          <div id="status" class="status" role="status"></div>
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <label for="options">Options</label>
+        <textarea id="options" rows="8" placeholder="Pizza 20%"></textarea>
+        <div class="controls">
+          <button id="spin">Spin</button>
+          <button id="reset" class="secondary">Reset</button>
+        </div>
+        <p class="hint">One option per line with % (e.g., Sushi 25%). Total should be 100%.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
